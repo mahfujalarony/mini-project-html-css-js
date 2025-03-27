@@ -18,10 +18,6 @@ body{
 }
 
 
-.logo{
-    
-}
-
 .navbar{
     display: flex;
     gap: 40px;
@@ -32,7 +28,61 @@ body{
     
 }
 
-.navbar li :hover {
-    opacity: 2;
-    color: #ada4a4;
+.navbar li:hover {
+    color: #ece9e9;;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.menu{
+    
+    display: none;
+}
+.menu:hover{
+    transform: scale(0.9);
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.logo:hover{
+    color: #ece9e9;;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.phone-navbar{
+    position: absolute;
+    right: -150px;
+    list-style: none;
+    background-color: slategrey;
+    color: #fff;
+    height: 100vh;
+    transition: right 0.4s ease;
+}
+
+.phone-navbar.open{
+    right: 0;
+}
+.phone-navbar li{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+.phone-navbar li:hover {
+    background-color: #ada4a4;
+    transition: 0.4s ease;
+}
+
+@media (max-width: 600px) {
+    .menu{
+        display: block;
+    }
+
+    .navbar{
+        display: none;
+    }
 }
